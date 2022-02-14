@@ -21,7 +21,7 @@ line = credential.readlines()
 username = line[0]
 password = line[1]
 
-# Fill form & login
+# Fill out form & login
 email_field = driver.find_element(By.ID, 'username')
 email_field.send_keys(username)
 sleep(1.5)
@@ -38,8 +38,8 @@ search_field = driver.find_element(By.XPATH, '//*[@id="global-nav-typeahead"]/in
 search_query = input('What profile do you want to scrape? ')
 search_field.send_keys(search_query)
 search_field.send_keys(Keys.RETURN)
-people_button = driver.find_element(By.CSS_SELECTOR, '[aria-label="People"]')
-people_button.click()
+object_button = driver.find_element(By.CSS_SELECTOR, '[aria-label="People"]')
+object_button.click()
 
 # Retrieve all profile url in current page
 def GetURL():
